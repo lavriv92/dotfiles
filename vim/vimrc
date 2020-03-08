@@ -1,0 +1,137 @@
+" enable syntax highlighting
+
+set nocompatible              " be iMproved, required
+filetype off                  " required
+
+call plug#begin('~/.vim/plugged')
+
+Plug 'klen/python-mode'
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
+Plug 'majutsushi/tagbar'
+Plug 'sukima/vim-javascript-imports'
+Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+Plug 'junegunn/fzf.vim'
+Plug 'airblade/vim-gitgutter'
+Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+Plug 'roxma/nvim-yarp'
+Plug 'roxma/vim-hug-neovim-rpc'
+Plug 'deoplete-plugins/deoplete-go', { 'do': 'make'}
+Plug 'deoplete-plugins/deoplete-jedi'
+Plug 'deoplete-plugins/deoplete-docker'
+Plug 'nsf/gocode', { 'rtp': 'nvim', 'do': '~/.config/nvim/plugged/gocode/nvim/symlink.sh' }
+Plug 'davidhalter/jedi-vim'
+Plug 'terryma/vim-multiple-cursors'
+Plug 'jiangmiao/auto-pairs'
+Plug 'tpope/vim-fugitive'
+Plug 'racer-rust/vim-racer'
+Plug 'fatih/vim-go'
+Plug 'Asheq/close-buffers.vim'
+Plug 'prettier/vim-prettier', { 'do': 'yarn install' }
+Plug 'alvan/vim-closetag'
+Plug 'hushicai/tagbar-javascript.vim'
+Plug 'mxw/vim-jsx'
+Plug 'mattn/emmet-vim'
+Plug 'kchmck/vim-coffee-script'
+Plug 'mustache/vim-mustache-handlebars' 
+Plug 'preservim/nerdtree'
+Plug 'Xuyuanp/nerdtree-git-plugin'
+Plug 'ryanoasis/vim-devicons'
+Plug 'artur-shaik/vim-javacomplete2'
+Plug 'flazz/vim-colorschemes'
+Plug 'rakr/vim-two-firewatch'
+
+call plug#end()
+
+filetype plugin indent on
+
+syntax enable
+set noswapfile
+set syntax=whitespace
+
+set mouse=a
+
+let $TERM="screen-256color"
+
+scriptencoding utf-8
+set encoding=utf-8
+setglobal fileencoding=utf-8
+
+set list
+set listchars=tab:→\ ,space:·,nbsp:␣,trail:•,precedes:«,extends:»
+
+set number
+
+set ts=2
+
+set autoindent
+
+set expandtab
+
+set shiftwidth=2
+
+au Filetype python setl et ts=4 sw=4
+
+set cursorline
+set showmatch
+
+let python_highlight_all = 1
+let g:pymode_rope = 0
+
+set nowrap
+
+if has("termguicolors")
+  set termguicolors
+  set t_AB=^[[48;5;%dm
+  set t_AF=^[[38;5;%dm
+end
+
+set t_Co=256
+colorscheme jellybeans
+
+
+call deoplete#custom#option('num_processes', 1)
+call deoplete#enable()
+
+let g:airline_powerline_fonts = 1
+
+let g:airline#extensions#tabline#enabled = 1
+let g:airline#extensions#tabline#formatter = 'unique_tail'
+let g:airline#extensions#tabline#buffer_nr_show = 1
+
+let g:Tlist_Ctags_Cmd='/usr/local/Cellar/ctags/5.8_1/bin/ctags'
+
+nmap <C-p> :Files<CR>
+
+set backspace=2
+
+
+let g:prettier#autoformat = 0
+autocmd BufWritePre *.js,*.jsx,*.mjs,*.ts,*.tsx,*.css,*.less,*.scss,*.json,*.graphql,*.md,*.vue PrettierAsync
+
+let g:tagbar_type_javascript = {
+      \ 'ctagstype': 'javascript',
+      \ 'kinds': [
+      \ 'a:arrays',
+      \ 'p:properties',
+      \ 't:tags',
+      \ 'o:objects',
+      \ 'g:generator functions',
+      \ 'f:functions',
+      \ 'c:constructors/classes',
+      \ 'm:methods',
+      \ 'v:variables',
+      \ 'i:imports',
+      \ 'e:exports',
+      \ 's:styled components'
+      \ ]}
+
+highlight NonText guifg=#4a4a59
+highlight SpecialKey guifg=#4a4a59
+
+let g:user_emmet_leader_key='<Tab>'
+let g:user_emmet_settings = {
+  \  'javascript.jsx' : {
+    \      'extends' : 'jsx',
+    \  },
+  \}
