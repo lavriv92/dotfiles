@@ -3,6 +3,7 @@ install: install-vim install-fish install-git \
 
 install-vim:
 	@echo "Installing vim"
+	brew install nvim
 	rm -rf ~/.config/nvim
 	mkdir -p ~/.config/nvim
 	ln -s `pwd`/vim/vimrc ~/.config/nvim/init.vim
