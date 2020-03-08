@@ -1,4 +1,4 @@
-install: install-vim install-fish \
+install: install-vim install-fish install-git\
 	install-tmux setup-iterm
 
 install-vim:
