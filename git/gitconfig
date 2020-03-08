@@ -1,3 +1,6 @@
+[core]
+  editor = "nvim"
+
 [user]
   name = "Ivan Lavriv"
   email = "lavriv92@gmail.com"
