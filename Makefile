@@ -3,8 +3,9 @@ install: install-vim install-fish install-git \
 
 install-vim:
 	@echo "Installing vim"
-	rm -rf ~/.config/nvim/init.vim
-	ln -s `pwd`/vim/vimrc ~/config/nvim/init.vim
+	rm -rf ~/.config/nvim
+	mkdir -p ~/.config/nvim
+	ln -s `pwd`/vim/vimrc ~/.config/nvim/init.vim
 	@echo "Finish installing vim"
 
 install-tmux:
