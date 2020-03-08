@@ -17,6 +17,9 @@ install-tmux:
 
 install-fish:
 	@echo "Install fish"
+	rm -rf ~/.config/fish
+	ln -s `pwd`/fish ~/.config/fish
+	@echo "Finish install fish"
 
 install-git:
 	@echo "Install git"
