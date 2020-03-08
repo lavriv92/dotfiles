@@ -26,3 +26,10 @@ setup-iterm:
 	rm -rf iterm-themes
 	git clone git@github.com:qtpi/Jellybeans.itermcolors.git iterm-themes
 	@echo "Finish clonning theme"
+
+backup:
+	@echo "Start backup"
+	git add . 
+	git commit -m"Backup for $(date)"
+	git push origin master
+	@echo "Backup finish"
