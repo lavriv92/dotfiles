@@ -3,7 +3,6 @@ install: install-vim install-fish install-git \
 
 install-vim:
 	@echo "Installing vim"
-	brew install nvim
 	rm -rf ~/.config/nvim
 	mkdir -p ~/.config/nvim
 	ln -s `pwd`/vim/vimrc ~/.config/nvim/init.vim
@@ -22,7 +21,11 @@ install-fish:
 	@echo "Finish install fish"
 
 install-git:
-	@echo "Install git"
+	@echo "Installing git"
+	rm -rf ~/.config/git
+	mkdir -p ~/.config/git
+	ln -s git/gitconfig ~/.config/git/config
+	@echo "Finish installing git"
 
 setup-iterm:
 	@echo "Clone jellybeans theme"
