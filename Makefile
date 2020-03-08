@@ -25,8 +25,8 @@ install-git:
 	rm -rf ~/.config/git
 	rm -rf ~/.gitconfig
 	mkdir -p ~/.config/git
-	ln -s git/gitconfig ~/.config/git/config
-	ln -s git/gitconfig ~/.gitconfig
+	ln -s `pwd`/git/gitconfig ~/.config/git/config
+	ln -s `pwd`/git/gitconfig ~/.gitconfig
 	@echo "Finish installing git"
 
 setup-iterm:
