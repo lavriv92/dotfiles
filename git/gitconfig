@@ -1,8 +1,0 @@
-[gpg]
-	program = /usr/local/bin/gpg
-[commit]
-	gpgsign = false
-[user]
-	signingkey = 80117D5B0D859973
-	name = Ivan Lavriv
-	email = lavriv92@gmail.com
