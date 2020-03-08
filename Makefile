@@ -30,6 +30,6 @@ setup-iterm:
 backup:
 	@echo "Start backup"
 	git add . 
-	git commit -m"Backup for $(shell date)"
+	git commit -m"Backup from $(shell date)"
 	git push origin master
 	@echo "Backup finish"
