@@ -3,5 +3,5 @@
   "javascript.updateImportsOnFileMove.enabled": "always",
   "editor.fontFamily": "Cascadia Code",
   "terminal.integrated.fontFamily": "monospace",
-  "workbench.colorTheme": "Tomorrow Night Blue"
+  "workbench.colorTheme": "Solarized Dark"
 }
