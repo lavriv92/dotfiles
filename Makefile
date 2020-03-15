@@ -35,6 +35,12 @@ setup-iterm:
 	git clone git@github.com:qtpi/Jellybeans.itermcolors.git iterm-themes
 	@echo "Finish clonning theme"
 
+install-vscode:
+	@echo "Install VSCode"
+	rm -rf ~/Library/ApplicationSupport/Code/User/settings.json
+	ln -s `pwd`/vscode/settings.json ~/Library/ApplicationSupport/Code/User/settings.json
+	@echo "End installing VSCode"
+
 backup-config:
 	@echo "Start backup"
 	git add . 

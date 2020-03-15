@@ -1,0 +1,7 @@
+duplicate session: base
+{
+  "editor.tabSize": 2,
+  "javascript.updateImportsOnFileMove.enabled": "always",
+  "editor.fontFamily": "Cascadia Code",
+  "terminal.integrated.fontFamily": "monospace"
+}
