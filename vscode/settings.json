@@ -6,7 +6,7 @@
   "git.suggestSmartCommit": false,
   "explorer.confirmDelete": false,
   "workbench.iconTheme": "ayu",
-  "workbench.colorTheme": "Ayu Mirage",
+  "workbench.colorTheme": "Ayu Mirage Bordered",
   "editor.renderWhitespace": "boundary",
   "editor.renderIndentGuides": false,
   "yaml.schemas": {

@@ -30,9 +30,9 @@ install-git:
 	@echo "Finish installing git"
 
 setup-iterm:
-	@echo "Clone jellybeans theme"
+	@echo "Clone ayu theme"
 	rm -rf iterm-themes
-	git clone git@github.com:qtpi/Jellybeans.itermcolors.git iterm-themes
+	git clone git@github.com:hwyncho/ayu-iTerm.git iterm-themes
 	@echo "Finish clonning theme"
 
 install-vscode:
