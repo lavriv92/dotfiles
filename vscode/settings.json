@@ -1,7 +1,6 @@
 {
   "editor.tabSize": 2,
   "javascript.updateImportsOnFileMove.enabled": "always",
-  "editor.fontFamily": "Cascadia Code",
   "terminal.integrated.fontFamily": "monospace",
   "git.suggestSmartCommit": false,
   "explorer.confirmDelete": false,
@@ -11,8 +10,22 @@
     "file:///Users/ilavriv/.vscode/extensions/me-dutour-mathieu.vscode-github-actions-2.2.7/schemas/workflow.schema.json": "/.github/workflows/*.yml",
     "file:///Users/ilavriv/.vscode/extensions/me-dutour-mathieu.vscode-github-actions-2.2.7/schemas/action.schema.json": "/action.yml"
   },
-  "workbench.iconTheme": "vscode-icons",
   "go.formatTool": "goimports",
   "go.useLanguageServer": true,
-  "workbench.colorTheme": "Spacemacs - dark"
+  "[typescriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "typescript.updateImportsOnFileMove.enabled": "always",
+  "explorer.confirmDragAndDrop": false,
+  "editor.minimap.enabled": false,
+  "workbench.activityBar.visible": true,
+  "editor.fontLigatures": true,
+  "workbench.editor.tabCloseButton": "left",
+  "debug.console.fontSize": 14,
+  "terminal.integrated.fontSize": 14,
+  "workbench.preferredDarkColorTheme": "Earthsong",
+  "rust.mode": "legacy",
+  "workbench.preferredHighContrastColorTheme": "Default Dark+",
+  "workbench.iconTheme": "vs-minimal",
+  "editor.fontSize": 14
 }
