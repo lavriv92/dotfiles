@@ -8,4 +8,6 @@ set -x TERM xterm-256color
 
 export PATH="$PATH:$HOME/.cargo/bin"
 
+export RUST_SRC_PATH=/usr/local/src/rustc/src
+
 

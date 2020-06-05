@@ -26,6 +26,6 @@
   "workbench.preferredDarkColorTheme": "Earthsong",
   "rust.mode": "legacy",
   "workbench.preferredHighContrastColorTheme": "Default Dark+",
-  "workbench.iconTheme": "vs-minimal",
-  "editor.fontSize": 14
+  "editor.fontSize": 14,
+  "workbench.iconTheme": "vs-minimal"
 }
