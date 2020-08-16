@@ -10,4 +10,7 @@ export PATH="$PATH:$HOME/.cargo/bin"
 
 export RUST_SRC_PATH=/usr/local/src/rustc/src
 
+export DENO_INSTALL="/Users/ilavriv/.deno"
+export PATH="$DENO_INSTALL/bin:$PATH"
+
 

@@ -26,6 +26,20 @@
   "workbench.preferredDarkColorTheme": "Earthsong",
   "rust.mode": "legacy",
   "workbench.preferredHighContrastColorTheme": "Default Dark+",
-  "editor.fontSize": 14,
-  "workbench.iconTheme": "vs-minimal"
+  "rust.rustup": {
+    "toolchain": "stable-x86_64-apple-darwin"
+  },
+  "files.saveConflictResolution": "overwriteFileOnDisk",
+  "editor.fontSize": 16,
+  "editor.smoothScrolling": true,
+  "editor.fontFamily": "Consolas, Menlo, Monaco, 'Courier New', monospace",
+  "python.pythonPath": "/Users/ilavriv/.virtualenvs/django-tutorial-4DZQ66lI/bin/python",
+  "[typescript]": {
+    "editor.defaultFormatter": "vscode.typescript-language-features"
+  },
+  "workbench.iconTheme": "vscode-icons",
+  "vsicons.dontShowNewVersionMessage": true,
+  "workbench.colorTheme": "Visual Studio Light",
+  "explorer.openEditors.visible": 3,
+  "explorer.incrementalNaming": "smart"
 }
