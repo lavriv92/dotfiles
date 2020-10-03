@@ -1,10 +1,10 @@
 [core]
-  editor = "nvim"
+	editor = vim
 	excludesfile = /Users/ilavriv/.gitignore_global
 
 [user]
 	name = ivan lavriv
-	email = ivan.lavriv@sigma.software
+	email = lavriv92@gmail.com
 [filter "lfs"]
 	required = true
 	clean = git-lfs clean -- %f

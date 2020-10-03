@@ -14,3 +14,5 @@ export DENO_INSTALL="/Users/ilavriv/.deno"
 export PATH="$DENO_INSTALL/bin:$PATH"
 
 
+rvm default
+rvm default

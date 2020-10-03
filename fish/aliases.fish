@@ -5,5 +5,5 @@ alias gci="git commit"
 
 
 alias tx="tmuxinator"
-alias vi="nvim"
+alias vi="vim"
 alias tmux="tmux -2"
