@@ -21,7 +21,6 @@ Plug 'deoplete-plugins/deoplete-jedi'
 Plug 'deoplete-plugins/deoplete-docker'
 Plug 'nsf/gocode', { 'rtp': 'nvim', 'do': '~/.config/nvim/plugged/gocode/nvim/symlink.sh' }
 Plug 'davidhalter/jedi-vim'
-Plug 'terryma/vim-multiple-cursors'
 Plug 'jiangmiao/auto-pairs'
 Plug 'tpope/vim-fugitive'
 Plug 'racer-rust/vim-racer'
@@ -42,6 +41,7 @@ Plug 'ryanoasis/vim-devicons'
 Plug 'artur-shaik/vim-javacomplete2'
 Plug 'flazz/vim-colorschemes'
 Plug 'rakr/vim-two-firewatch'
+Plug 'mg979/vim-visual-multi', {'branch': 'master'}
 
 call plug#end()
 
