@@ -13,6 +13,11 @@ export RUST_SRC_PATH=/usr/local/src/rustc/src
 export DENO_INSTALL="/Users/ilavriv/.deno"
 export PATH="$DENO_INSTALL/bin:$PATH"
 
+export PATH="$HOME/.pyenv/bin:$PATH"
+eval "(pyenv init -)"
+eval "(pyenv virtualenv-init -)"
+
+
 
 rvm default
 rvm default
