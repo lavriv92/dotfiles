@@ -41,6 +41,7 @@ Plug 'ryanoasis/vim-devicons'
 Plug 'artur-shaik/vim-javacomplete2'
 Plug 'flazz/vim-colorschemes'
 Plug 'rakr/vim-two-firewatch'
+Plug 'ayu-theme/ayu-vim'
 Plug 'mg979/vim-visual-multi', {'branch': 'master'}
 
 call plug#end()
@@ -89,7 +90,8 @@ if has("termguicolors")
 end
 
 set t_Co=256
-colorscheme jellybeans
+let ayucolor="dark"
+colorscheme ayu
 
 
 call deoplete#custom#option('num_processes', 1)
