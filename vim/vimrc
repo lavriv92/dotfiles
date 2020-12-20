@@ -39,10 +39,14 @@ Plug 'preservim/nerdtree'
 Plug 'Xuyuanp/nerdtree-git-plugin'
 Plug 'ryanoasis/vim-devicons'
 Plug 'artur-shaik/vim-javacomplete2'
-Plug 'flazz/vim-colorschemes'
 Plug 'rakr/vim-two-firewatch'
-Plug 'ayu-theme/ayu-vim'
+Plug 'franbach/miramare'
+Plug 'sheerun/vim-polyglot'
 Plug 'mg979/vim-visual-multi', {'branch': 'master'}
+Plug 'thaerkh/vim-indentguides'
+Plug 'ayu-theme/ayu-vim'
+Plug 'morhetz/gruvbox'
+Plug 'chriskempson/base16-vim'
 
 call plug#end()
 
@@ -61,7 +65,6 @@ set encoding=utf-8
 setglobal fileencoding=utf-8
 
 set list
-set listchars=tab:→\ ,space:·,nbsp:␣,trail:•,precedes:«,extends:»
 
 set number
 
@@ -90,13 +93,16 @@ if has("termguicolors")
 end
 
 set t_Co=256
-let ayucolor="dark"
-colorscheme ayu
-
+let ayucolor = 'mirage'
+let base16colorspace=256
+colorscheme base16-gruvbox-dark-soft
+highlight LineNr guibg=NONE
+highlight VertSplit guibg=NONE
 
 call deoplete#custom#option('num_processes', 1)
 call deoplete#enable()
 
+let g:airline_theme = 'gruvbox'
 let g:airline_powerline_fonts = 1
 
 let g:airline#extensions#tabline#enabled = 1
