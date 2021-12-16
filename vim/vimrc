@@ -44,9 +44,6 @@ Plug 'franbach/miramare'
 Plug 'sheerun/vim-polyglot'
 Plug 'mg979/vim-visual-multi', {'branch': 'master'}
 Plug 'thaerkh/vim-indentguides'
-Plug 'ayu-theme/ayu-vim'
-Plug 'morhetz/gruvbox'
-Plug 'chriskempson/base16-vim'
 
 call plug#end()
 
@@ -93,18 +90,11 @@ if has("termguicolors")
 end
 
 set t_Co=256
-let ayucolor = 'mirage'
-let base16colorspace=256
-colorscheme base16-gruvbox-dark-soft
 highlight LineNr guibg=NONE
 highlight VertSplit guibg=NONE
 
-call deoplete#custom#option('num_processes', 1)
-call deoplete#enable()
 
-let g:airline_theme = 'gruvbox'
 let g:airline_powerline_fonts = 1
-
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#formatter = 'unique_tail'
 let g:airline#extensions#tabline#buffer_nr_show = 1
@@ -114,6 +104,8 @@ let g:Tlist_Ctags_Cmd='/usr/local/Cellar/ctags/5.8_1/bin/ctags'
 nmap <C-p> :Files<CR>
 
 set backspace=2
+
+let g:airline#extensions#tabline#enabled = 1
 
 
 let g:prettier#autoformat = 0
