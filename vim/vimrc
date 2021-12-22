@@ -1,22 +1,20 @@
-" enable syntax highlighting
-
 set nocompatible              " be iMproved, required
 filetype off                  " required
 
 call plug#begin('~/.vim/plugged')
 
-Plug 'klen/python-mode'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
+Plug 'mattn/webapi-vim'
+Plug 'Wildog/airline-weather.vim'
+Plug 'enricobacis/vim-airline-clock'
 Plug 'majutsushi/tagbar'
-Plug 'sukima/vim-javascript-imports'
-Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
-Plug 'junegunn/fzf.vim'
 Plug 'airblade/vim-gitgutter'
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 Plug 'roxma/nvim-yarp'
+Plug 'thaerkh/vim-indentguides'
 Plug 'roxma/vim-hug-neovim-rpc'
-Plug 'deoplete-plugins/deoplete-go', { 'do': 'make'}
+Plug 'deoplete-plugins/deoplete-g:o', { 'do': 'make'}
 Plug 'deoplete-plugins/deoplete-jedi'
 Plug 'deoplete-plugins/deoplete-docker'
 Plug 'nsf/gocode', { 'rtp': 'nvim', 'do': '~/.config/nvim/plugged/gocode/nvim/symlink.sh' }
@@ -28,10 +26,6 @@ Plug 'fatih/vim-go'
 Plug 'Asheq/close-buffers.vim'
 Plug 'prettier/vim-prettier', { 'do': 'yarn install' }
 Plug 'alvan/vim-closetag'
-Plug 'hushicai/tagbar-javascript.vim'
-Plug 'mxw/vim-jsx'
-Plug 'leafgarland/typescript-vim'
-Plug 'peitalin/vim-jsx-typescript'
 Plug 'mattn/emmet-vim'
 Plug 'kchmck/vim-coffee-script'
 Plug 'mustache/vim-mustache-handlebars' 
@@ -39,15 +33,26 @@ Plug 'preservim/nerdtree'
 Plug 'Xuyuanp/nerdtree-git-plugin'
 Plug 'ryanoasis/vim-devicons'
 Plug 'artur-shaik/vim-javacomplete2'
-Plug 'rakr/vim-two-firewatch'
-Plug 'franbach/miramare'
 Plug 'sheerun/vim-polyglot'
 Plug 'mg979/vim-visual-multi', {'branch': 'master'}
-Plug 'thaerkh/vim-indentguides'
+Plug 'archSeer/elixir.nvim'
+Plug 'slashmili/alchemist.vim'
+Plug 'nvim-lua/plenary.nvim'
+Plug 'nvim-telescope/telescope.nvim'
+Plug 'wincent/command-t'
+Plug 'nanotech/jellybeans.vim'
+Plug 'honza/vim-snippets'
+Plug 'psliwka/vim-smoothie'
+Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
+Plug 'vim-scripts/desert256.vim'
+Plug 'vim-scripts/dante.vim'
+Plug 'numToStr/Comment.nvim'
 
 call plug#end()
 
 filetype plugin indent on
+
+lua require('Comment').setup()
 
 syntax enable
 set noswapfile
@@ -62,78 +67,76 @@ set encoding=utf-8
 setglobal fileencoding=utf-8
 
 set list
+set listchars=tab:›\ ,trail:•,extends:#,nbsp:.
 
 set number
 
 set ts=2
 
 set autoindent
-
+set smartindent
 set expandtab
+
+set termguicolors
 
 set shiftwidth=2
 
 au Filetype python setl et ts=4 sw=4
 
-set cursorline
+"set cursorline
 set showmatch
+
+set incsearch
+set ignorecase
+set smartcase
+set hidden
+set autowrite
+set ttyfast
+
+set scrolloff=5
+
+hi VertSplit guibg=bg guifg=bg
 
 let python_highlight_all = 1
 let g:pymode_rope = 0
+let g:python3_host_prog='/usr/local/bin/python3'
 
 set nowrap
 
-if has("termguicolors")
-  set termguicolors
-  set t_AB=^[[48;5;%dm
-  set t_AF=^[[38;5;%dm
-end
-
 set t_Co=256
-highlight LineNr guibg=NONE
-highlight VertSplit guibg=NONE
 
+set background=dark
+colorscheme dante
 
 let g:airline_powerline_fonts = 1
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#formatter = 'unique_tail'
 let g:airline#extensions#tabline#buffer_nr_show = 1
+let g:airline_theme='luna'
+
 
 let g:Tlist_Ctags_Cmd='/usr/local/Cellar/ctags/5.8_1/bin/ctags'
 
-nmap <C-p> :Files<CR>
-
-set backspace=2
 
 let g:airline#extensions#tabline#enabled = 1
-
 
 let g:prettier#autoformat = 0
 autocmd BufWritePre *.js,*.jsx,*.mjs,*.ts,*.tsx,*.css,*.less,*.scss,*.json,*.graphql,*.md,*.vue PrettierAsync
 
-let g:tagbar_type_javascript = {
-      \ 'ctagstype': 'javascript',
-      \ 'kinds': [
-      \ 'a:arrays',
-      \ 'p:properties',
-      \ 't:tags',
-      \ 'o:objects',
-      \ 'g:generator functions',
-      \ 'f:functions',
-      \ 'c:constructors/classes',
-      \ 'm:methods',
-      \ 'v:variables',
-      \ 'i:imports',
-      \ 'e:exports',
-      \ 's:styled components'
-      \ ]}
 
-highlight NonText guifg=#4a4a59
-highlight SpecialKey guifg=#4a4a59
+highlight clear SignColumn
 
-let g:user_emmet_leader_key='<Tab>'
-let g:user_emmet_settings = {
-  \  'javascript.jsx' : {
-    \      'extends' : 'jsx',
-    \  },
-  \}
+let g:deoplete#enable_at_startup = 1
+
+let g:weather#area = 'lviv,ua'
+let g:weather#unit = 'metric'
+
+nmap <C-p> :Telescope find_files<CR>
+nmap <C-b> :NERDTreeToggle<CR>
+
+autocmd FileType python,c,cpp TagbarOpen
+autocmd VimEnter * NERDTree
+autocmd VimEnter * wincmd p
+
+set fillchars=vert:│
+highlight VertSplit cterm=none gui=none

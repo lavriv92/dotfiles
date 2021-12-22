@@ -4,19 +4,24 @@
 
 [user]
 	name = ivan lavriv
-	email = lavriv92@gmail.com
+  email = lavriv92@gmail.com
+
 [filter "lfs"]
 	required = true
 	clean = git-lfs clean -- %f
 	smudge = git-lfs smudge -- %f
-	process = git-lfs filter-process
+  process = git-lfs filter-process
+
 [difftool "sourcetree"]
 	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
-	path = 
+  path = 
+
 [mergetool "sourcetree"]
 	cmd = /Applications/Sourcetree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
-	trustExitCode = true
+  trustExitCode = true
+
 [commit]
-	template = /Users/ilavriv/.stCommitMsg
+  template = /Users/ilavriv/.stCommitMsg
+
 [init]
 	defaultBranch = main
