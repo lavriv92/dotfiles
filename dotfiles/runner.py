@@ -1,9 +1,9 @@
 import logging
 from pathlib import Path
 
-from dotfiles.enums import Operation
-from dotfiles.exceptions import UnsuppertedOperation
-from dotfiles.actions import link_vimfiles
+from .enums import Operation
+from .exceptions import UnsuppertedOperation
+from .actions import link_vimfiles
 
 logger = logging.getLogger(__name__)
 

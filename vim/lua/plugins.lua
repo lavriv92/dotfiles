@@ -22,19 +22,9 @@ return require('packer').startup(function()
   use {'akinsho/bufferline.nvim', requires = 'kyazdani42/nvim-web-devicons'}
   use 'majutsushi/tagbar'
   use 'airblade/vim-gitgutter'
-  use {
-    'Shougo/deoplete.nvim',
-    cmd=':UpdateRemotePlugins'
-  }
   use 'roxma/nvim-yarp'
   use 'thaerkh/vim-indentguides'
   use 'roxma/vim-hug-neovim-rpc'
-  use {
-    'deoplete-plugins/deoplete-go',
-    cmd='make'
-  }
-  use 'deoplete-plugins/deoplete-jedi'
-  use 'deoplete-plugins/deoplete-docker'
   use {
     'nsf/gocode', 
     rtp='nvim',
@@ -54,18 +44,12 @@ return require('packer').startup(function()
   use 'mattn/emmet-vim'
   use 'kchmck/vim-coffee-script'
   use 'mustache/vim-mustache-handlebars' 
-  use 'ryanoasis/vim-devicons'
-  use 'artur-shaik/vim-javacomplete2'
   use 'sheerun/vim-polyglot'
-  use {
-    'mg979/vim-visual-multi',
-    branch='master'
-  }
+  use { 'mg979/vim-visual-multi', branch='master' }
   use 'archSeer/elixir.nvim'
   use 'slashmili/alchemist.vim'
   use 'nvim-lua/plenary.nvim'
   use 'nvim-telescope/telescope.nvim'
-  use 'honza/vim-snippets'
   use 'psliwka/vim-smoothie'
   use 'tiagofumo/vim-nerdtree-syntax-highlight'
   use 'vim-scripts/dante.vim'

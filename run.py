@@ -1,4 +1,4 @@
-import logging 
+import logging
 from dotfiles import DotfilesRunner, DotfilesArgsParser
 from dotfiles.exceptions import BaseDotfilesException
 
@@ -10,6 +10,7 @@ def main():
     runner = DotfilesRunner(opts.operation)
 
     runner.operation()
+
 
 if __name__ == "__main__":
     logging.basicConfig(level=logging.DEBUG)
