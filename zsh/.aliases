@@ -1,0 +1,4 @@
+
+alias weather="curl https://wttr.in/lviv"
+alias vi="nvim"
+alias ls="exa --icons"

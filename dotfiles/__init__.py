@@ -1,6 +1,6 @@
-from dotfiles.runner import DotfilesRunner
-from dotfiles.argument_parser import DotfilesArgsParser
-from dotfiles.exceptions import BaseDotfilesException 
+from .runner import DotfilesRunner
+from .argument_parser import DotfilesArgsParser
+from .exceptions import BaseDotfilesException 
 
 
 __all__ = (

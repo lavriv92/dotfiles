@@ -19,6 +19,14 @@ def link_vimfiles(source: Path, target: Path):
 
 @action(
     source=BASE_SOURCE_PATH,
+    target=BASE_TARGET_PATH
+)
+def link_zsh(source: Path, target: Path):
+    pass
+
+
+@action(
+    source=BASE_SOURCE_PATH,
     target=''
 )
 def link_git(_source, _target):

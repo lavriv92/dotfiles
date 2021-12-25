@@ -2,6 +2,7 @@ import logging
 from dotfiles import DotfilesRunner, DotfilesArgsParser
 from dotfiles.exceptions import BaseDotfilesException
 
+
 logger = logging.getLogger(__name__)
 
 def main():

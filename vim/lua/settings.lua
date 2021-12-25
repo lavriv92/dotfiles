@@ -4,16 +4,16 @@ local fn = vim.fn
 local opt = vim.opt
 local o = vim.o
 
--------------------------
+------------------------------------------------
 -- STARTUP
--------------------------
+------------------------------------------------
 
 cmd('filetype plugin indent on')
 cmd('syntax enable')
 
--------------------------
+------------------------------------------------
 -- EDITOR
--------------------------
+------------------------------------------------
 opt.number = true
 opt.ts = 2
 opt.autoindent = true
@@ -27,9 +27,12 @@ o.wrap = false
 cmd('setglobal "utf-8"')
 cmd('au FileType python,java,rust setl et ts=4 sw=4')
 
--------------------------
+require('diagnostic').setup()
+
+------------------------------------------------
 -- UI
--------------------------
+------------------------------------------------
+
 opt.termguicolors = true
 opt.background = 'dark'
 opt.fillchars = 'vert:|'
@@ -59,8 +62,6 @@ opt.scrolloff = 5
 g.python3_host_prog='/usr/local/bin/python3'
 opt.completeopt = 'menu,menuone,noselect'
 
---g.Tlist_Ctags_Cmd='/usr/local/Cellar/ctags/5.8_1/bin/ctags'
-
 ------------------------------------------------
 -- STARTUP
 ------------------------------------------------
@@ -68,4 +69,4 @@ opt.completeopt = 'menu,menuone,noselect'
 require('complection').setup()
 require('workbranch').setup()
 
-cmd('autocmd FileType python,c,cpp TagbarOpen')
+cmd('autocmd FileType python,c,cpp,java TagbarOpen')

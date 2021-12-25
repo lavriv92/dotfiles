@@ -4,8 +4,9 @@ function complection.setup()
   local capabilities = vim.lsp.protocol.make_client_capabilities()
   capabilities = require('cmp_nvim_lsp').update_capabilities(capabilities)
   local lspconfig = require('lspconfig')
+  local servers = { 'jedi_language_server', 'go-langserver' }
+  local cmp = require('cmp')
 
-  local servers = { 'pyright' }
   for _, lsp in ipairs(servers) do
     lspconfig[lsp].setup {
       capabilities = capabilities,
@@ -13,7 +14,6 @@ function complection.setup()
   end
 
   require('lspconfig').pyright.setup{}
-  local cmp = require('cmp')
 
   cmp.setup{
     mapping={

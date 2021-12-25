@@ -55,6 +55,15 @@ return require('packer').startup(function()
   use 'vim-scripts/dante.vim'
   use {
     'numToStr/Comment.nvim',
-    config = function() require('Comment').setup() end
+    config=function()
+      require('Comment').setup()
+    end
   }
+  use {
+    'scalameta/nvim-metals',
+    requires = {
+      "nvim-lua/plenary.nvim"
+    }
+  }
+
 end)
